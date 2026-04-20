@@ -11,7 +11,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATABASE = os.path.join(BASE_DIR, "mindlink.db")
-GROQ_API_KEY = "api key"
+GROQ_API_KEY = "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"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.3-70b-versatile"
 
