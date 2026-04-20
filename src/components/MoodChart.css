@@ -1,0 +1,41 @@
+.mood-chart {
+  padding: var(--space-lg);
+}
+
+.mood-chart__title {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.mood-chart__subtitle {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.mood-chart__wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+.mood-chart__svg {
+  overflow: visible;
+}
+
+.mood-chart__bar {
+  animation: barGrow 0.55s var(--ease-spring) both;
+  transform-box: fill-box;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.mood-chart__count {
+  transition: fill var(--duration-fast) var(--ease-out);
+}
+
+.mood-chart__emoji {
+  transition: filter var(--duration-fast) var(--ease-out);
+}

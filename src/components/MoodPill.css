@@ -1,0 +1,80 @@
+.mood-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+  transform: scale(1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mood-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--pill-color-soft);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.mood-pill:hover {
+  border-color: var(--pill-color-border);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.mood-pill:hover::before {
+  opacity: 1;
+}
+
+.mood-pill:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── Active/Selected State ── */
+.mood-pill--active {
+  color: var(--pill-color);
+  border-color: var(--pill-color-border);
+  transform: scale(1.06);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    0 0 20px var(--pill-color-soft);
+}
+
+.mood-pill--active::before {
+  opacity: 1;
+}
+
+.mood-pill--active:hover {
+  transform: scale(1.06);
+}
+
+.mood-pill__emoji {
+  font-size: 28px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.mood-pill:hover .mood-pill__emoji {
+  transform: scale(1.15);
+}
+
+.mood-pill__label {
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.2px;
+}

@@ -1,0 +1,56 @@
+.mood-orb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 210px;
+  margin: 8px auto 28px;
+}
+
+.mood-orb__glow {
+  position: absolute;
+  inset: -50px;
+  border-radius: 50%;
+  animation: pulseGlow 4s ease-in-out infinite;
+  transition: background var(--duration-slow) var(--ease-out);
+  pointer-events: none;
+}
+
+.mood-orb__svg {
+  width: 200px;
+  height: 200px;
+  animation: orbFloat 5s ease-in-out infinite;
+  transition: filter var(--duration-normal) var(--ease-out);
+  overflow: visible;
+}
+
+/* ── Rotating outer ring ── */
+.mood-orb__ring-outer {
+  transform-origin: 100px 100px;
+  animation: orbRingSpin 35s linear infinite;
+}
+
+/* ── Pulsing middle ring ── */
+.mood-orb__ring-mid {
+  transform-origin: 100px 100px;
+  animation: orbRingPulse 3.5s ease-in-out infinite;
+}
+
+/* ── SVG color transitions ── */
+.mood-orb__svg circle,
+.mood-orb__svg stop {
+  transition:
+    fill var(--duration-slow) var(--ease-out),
+    stroke var(--duration-slow) var(--ease-out),
+    stop-color var(--duration-slow) var(--ease-out);
+}
+
+/* ── Pulse state (after logging mood) ── */
+.mood-orb--pulsing .mood-orb__svg {
+  animation: orbPulse 0.7s var(--ease-spring);
+}
+
+.mood-orb--pulsing .mood-orb__glow {
+  animation: orbGlowBurst 0.7s var(--ease-out);
+}

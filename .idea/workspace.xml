@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbcbe858-145d-41bc-b621-cda3d6394686" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/AppContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AppContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Insights.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Insights.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Insights.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Insights.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MoodCheckin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MoodCheckin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MoodCheckin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MoodCheckin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;athrv-j&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/athrv-j/mindlink&quot;,
+    &quot;accountId&quot;: &quot;46f6f8fd-7b85-4396-9399-97c50c55f533&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3CXebzYAgLwojS8aNpMr4KmfugF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.app.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/STUDY/PYTHON/PythonProject/MINDLINK"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\STUDY\PYTHON\PythonProject\code flix mind\backend" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-3944b0c99280-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbcbe858-145d-41bc-b621-cda3d6394686" name="Changes" comment="" />
+      <created>1776536418286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776536418286</updated>
+    </task>
+    <servers />
+  </component>
+</project>

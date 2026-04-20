@@ -1,0 +1,518 @@
+/* ═══════════════════════════════
+   INSIGHTS - DESKTOP DASHBOARD
+   ═══════════════════════════════ */
+
+.insights {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* HEADER */
+.insights__header {
+  margin-bottom: 30px;
+}
+
+.insights__header h1 {
+  font-size: 2.5rem;
+}
+
+/* GRID LAYOUT */
+.insights__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+}
+
+/* LEFT SIDE */
+.insights__main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* RIGHT SIDE */
+.insights__side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* STATS */
+.insights__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* GLASS CARD */
+.stat-card,
+.insight-card {
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 20px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
+  transition: 0.3s ease;
+}
+
+.stat-card:hover,
+.insight-card:hover {
+  transform: translateY(-5px);
+}
+
+/* CHART WRAPPER */
+.insights__chart {
+  padding: 20px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* TOP MOOD */
+.insights__top-mood {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insights__top-emoji {
+  font-size: 1.6rem;
+}
+
+/* BUTTON */
+.insights__summary-action {
+  display: flex;
+  justify-content: center;
+}
+
+.insights__summary-action button {
+  padding: 14px 30px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #00ffc8, #6a5cff);
+  border: none;
+  color: black;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.insights__summary-action button:hover {
+  transform: scale(1.05);
+}
+
+/* EMPTY */
+.insights__empty {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* ── RISK PREDICTOR CARD ── */
+.insights__risk-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  border-radius: 22px;
+  border: 1px solid;
+  margin: 4px 0 24px;
+  animation: fadeIn 0.5s ease;
+  transition: transform 0.2s ease;
+}
+.insights__risk-card:hover { transform: translateY(-3px); }
+
+.insights__risk-left  { display: flex; flex-direction: column; gap: 6px; }
+.insights__risk-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted, #888); }
+.insights__risk-predicted { display: flex; align-items: center; gap: 10px; }
+.insights__risk-emoji  { font-size: 2rem; line-height: 1; }
+.insights__risk-mood   { font-size: 1.4rem; font-weight: 700; color: var(--color-text-primary); }
+.insights__risk-pattern { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 2px; }
+
+.insights__risk-right { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.insights__risk-score-ring {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--ring-color, #00ffc8);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--ring-color, #00ffc8) 30%, transparent);
+}
+.insights__risk-score-num   { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+.insights__risk-score-label { font-size: 0.6rem; color: var(--color-text-muted); text-transform: uppercase; }
+.insights__risk-band        { font-size: 0.8rem; font-weight: 700; }
+.insights__risk-events-note { font-size: 0.72rem; color: #ffa44f; }
+
+/* ── AI SUMMARY CARD ── */
+.insights__ai-card {
+  margin: 8px 0 24px;
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.4s ease;
+}
+.insights__ai-risk-badge {
+  display: inline-flex; align-items: center;
+  padding: 5px 14px; border-radius: 999px;
+  font-size: 0.8rem; font-weight: 700; width: fit-content;
+}
+.insights__ai-risk-badge--high     { background: rgba(255,79,79,0.15);   color: #ff7b7b; }
+.insights__ai-risk-badge--moderate { background: rgba(255,164,79,0.15);  color: #ffb347; }
+.insights__ai-risk-badge--low      { background: rgba(0,255,200,0.1);    color: #00ffc8; }
+
+.insights__ai-reflection {
+  font-size: 1rem; line-height: 1.75;
+  color: var(--color-text-primary);
+  border-left: 3px solid var(--color-accent); padding-left: 16px;
+}
+.insights__ai-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.insights__ai-block {
+  padding: 14px 16px; border-radius: 14px;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+}
+.insights__ai-block--forecast {
+  border-color: rgba(106,92,255,0.3); background: rgba(106,92,255,0.06);
+}
+.insights__ai-block h4 {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 6px;
+}
+.insights__ai-block p { font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+
+.insights__ai-calendar-prep {
+  padding: 14px 18px; border-radius: 14px;
+  background: rgba(255,164,79,0.07); border: 1px solid rgba(255,164,79,0.25);
+}
+.insights__ai-calendar-prep h4 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #ffa44f; margin-bottom: 6px; }
+.insights__ai-calendar-prep p  { font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+
+.insights__ai-self-care {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 14px 18px; border-radius: 14px;
+  background: rgba(0,255,200,0.06); border: 1px solid rgba(0,255,200,0.18);
+}
+.insights__ai-self-care-icon { font-size: 1.3rem; line-height: 1; flex-shrink: 0; }
+.insights__ai-self-care p    { font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+
+.insights__ai-todos {
+  padding: 16px 18px; border-radius: 14px;
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);
+}
+.insights__ai-todos h4 {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 10px;
+}
+.insights__ai-todos ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.insights__ai-todos li {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 0.875rem; color: var(--color-text-primary); line-height: 1.5;
+}
+.insights__ai-todos li::before { content: '✔'; color: var(--color-accent); font-size: 0.8rem; flex-shrink: 0; margin-top: 2px; }
+
+/* ───────── MOBILE ───────── */
+@media (max-width: 900px) {
+  .insights__grid    { grid-template-columns: 1fr; }
+  .insights__stats   { grid-template-columns: 1fr; }
+  .insights__ai-grid { grid-template-columns: 1fr; }
+  .insights__risk-card { flex-direction: column; align-items: flex-start; }
+  .insights__risk-right { align-items: flex-start; }
+}
+
+
+/* ───────── STRESSFUL EVENTS ───────── */
+.insights__stressful-events {
+  margin: 24px 0;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255, 100, 100, 0.06);
+  border: 1px solid rgba(255, 100, 100, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+.insights__stressful-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.insights__stressful-icon {
+  font-size: 1.3rem;
+}
+
+.insights__stressful-header h3 {
+  font-size: var(--text-md, 1rem);
+  font-weight: 600;
+  color: #ff9898;
+  margin: 0;
+}
+
+.insights__stressful-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.insights__stressful-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid;
+  transition: transform 0.2s ease;
+}
+
+.insights__stressful-item:hover {
+  transform: translateX(4px);
+}
+
+.insights__stressful-item--urgent {
+  border-left-color: #ff4f4f;
+  background: rgba(255, 79, 79, 0.08);
+}
+
+.insights__stressful-item--soon {
+  border-left-color: #ffa44f;
+  background: rgba(255, 164, 79, 0.08);
+}
+
+.insights__stressful-item--upcoming {
+  border-left-color: #6a5cff;
+  background: rgba(106, 92, 255, 0.08);
+}
+
+.insights__stressful-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.insights__stressful-title {
+  font-weight: 600;
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-primary);
+}
+
+.insights__stressful-reason {
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #888);
+}
+
+.insights__stressful-days {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.insights__stressful-days-num {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffb347;
+}
+
+.insights__stressful-item--urgent .insights__stressful-days-num {
+  color: #ff4f4f;
+}
+
+.insights__stressful-date {
+  font-size: 0.7rem;
+  color: var(--color-text-muted, #888);
+}
+
+.insights__stressful-tip {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #888);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════
+   CALENDAR PANEL (always visible)
+   ══════════════════════════════════════ */
+.insights__calendar-panel {
+  margin: 24px 0;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(106, 92, 255, 0.25);
+  animation: fadeIn 0.4s ease;
+}
+
+.insights__calendar-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.insights__calendar-panel-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.insights__calendar-panel-title {
+  font-size: var(--text-md, 1rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 2px;
+}
+
+.insights__calendar-panel-sub {
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #888);
+}
+
+/* Empty state */
+.insights__calendar-empty {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.insights__calendar-empty-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.insights__calendar-empty-hint {
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+/* Event list */
+.insights__calendar-events {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.insights__cal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid rgba(255,255,255,0.1);
+  transition: transform 0.2s ease;
+}
+
+.insights__cal-item:hover {
+  transform: translateX(4px);
+}
+
+.insights__cal-item--normal {
+  border-left-color: rgba(106, 92, 255, 0.5);
+}
+
+.insights__cal-item--stressful {
+  border-left-color: #6a5cff;
+  background: rgba(106, 92, 255, 0.07);
+}
+
+.insights__cal-item--soon {
+  border-left-color: #ffa44f;
+  background: rgba(255, 164, 79, 0.08);
+}
+
+.insights__cal-item--urgent {
+  border-left-color: #ff4f4f;
+  background: rgba(255, 79, 79, 0.08);
+}
+
+.insights__cal-item-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.insights__cal-item-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-top: 5px;
+  opacity: 0.6;
+}
+
+.insights__cal-item--urgent .insights__cal-item-dot { color: #ff4f4f; }
+.insights__cal-item--soon   .insights__cal-item-dot { color: #ffa44f; }
+.insights__cal-item--stressful .insights__cal-item-dot { color: #6a5cff; }
+.insights__cal-item--normal .insights__cal-item-dot { color: #888; }
+
+.insights__cal-item-title {
+  display: block;
+  font-weight: 600;
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-primary);
+}
+
+.insights__cal-item-reason {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-muted, #888);
+  margin-top: 2px;
+}
+
+.insights__cal-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.insights__cal-item-days {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffb347;
+}
+
+.insights__cal-item--urgent .insights__cal-item-days { color: #ff4f4f; }
+.insights__cal-item--soon   .insights__cal-item-days { color: #ffa44f; }
+
+.insights__cal-item-date {
+  font-size: 0.7rem;
+  color: var(--color-text-muted, #888);
+}
+
+.insights__cal-item-badge {
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: #ff4f4f;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(255, 79, 79, 0.4);
+}
+
+.insights__calendar-tip {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #888);
+}

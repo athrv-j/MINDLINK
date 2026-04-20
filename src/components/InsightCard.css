@@ -1,0 +1,62 @@
+.insight-card {
+  position: relative;
+  padding: var(--space-lg);
+  padding-left: calc(var(--space-lg) + 4px);
+  overflow: hidden;
+  animation: fadeInUp 0.4s var(--ease-out) both;
+}
+
+.insight-card__accent {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-muted) 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+.insight-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.insight-card__icon {
+  font-size: 16px;
+}
+
+.insight-card__title {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.insight-card__body {
+  min-height: 32px;
+}
+
+.insight-card__text {
+  font-size: var(--text-sm);
+  line-height: 1.75;
+  color: rgba(245, 240, 232, 0.8);
+}
+
+.insight-card__loading {
+  display: flex;
+  gap: 6px;
+  padding: 8px 0;
+}
+
+.insight-card__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: dotBounce 0.6s ease-in-out infinite;
+}

@@ -1,0 +1,36 @@
+.stat-card {
+  padding: var(--space-lg);
+  transition: all var(--duration-normal) var(--ease-out);
+  --stat-accent: var(--color-accent);
+}
+
+.stat-card:hover {
+  background: var(--color-bg-card-hover);
+  border-color: var(--glass-border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.stat-card__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: var(--space-sm);
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  color: var(--stat-accent);
+  line-height: 1.2;
+}
+
+.stat-card__value span {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-text-muted);
+}

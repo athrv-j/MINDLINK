@@ -1,0 +1,43 @@
+.aurora-container {
+  position: fixed;
+  inset: -10%;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  overflow: hidden;
+  filter: blur(80px);
+  pointer-events: none;
+  background: var(--color-bg-deep);
+}
+
+.aurora-blob {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  border-radius: 50%;
+  will-change: transform, border-radius;
+}
+
+.aurora-blob--1 {
+  top: -10%;
+  left: -10%;
+  background: var(--aurora-1);
+  animation: auroraMorph 25s infinite alternate ease-in-out;
+}
+
+.aurora-blob--2 {
+  bottom: -15%;
+  right: -5%;
+  background: var(--aurora-2);
+  animation: auroraMorph 35s infinite alternate-reverse ease-in-out;
+}
+
+.aurora-blob--3 {
+  top: 40%;
+  left: 30%;
+  width: 40vw;
+  height: 40vh;
+  background: var(--aurora-3);
+  animation: auroraMorph 20s infinite alternate ease-in-out;
+  opacity: 0.6;
+}

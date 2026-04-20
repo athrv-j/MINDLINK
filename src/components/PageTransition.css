@@ -1,0 +1,3 @@
+.page-transition {
+  animation: pageEnter 0.4s var(--ease-out) both;
+}
